@@ -1,27 +1,27 @@
-# Hub de Saúde: [nome ou apelido]
+# Health Hub: [name or nickname]
 
-> 🧭 [Hub](00_Hub.md) · [Clínico](Clinico.md) · [Genética](Genetica.md) · [Correlator](Correlator.md) · [Plano](Plano.md) · [Resumo](Resumo_Consulta.md)
+> 🧭 [Hub](00_Hub.md) · [Clinical](Clinical.md) · [Genetics](Genetics.md) · [Correlator](Correlator.md) · [Plan](Plan.md) · [Visit summary](Visit_Summary.md)
 
-> Organização e síntese pra levar ao médico. O médico tem a palavra final.
+> Organization and synthesis to take to the doctor. The doctor has the final word.
 
-## Painel rápido ([mês/ano])
+## Quick dashboard ([month year])
 
-| Indicador | Valor (data) | Estado |
+| Marker | Value (date) | Status |
 |---|---|---|
-| [ex.: LDL] | [valor unidade (dd/mm/aaaa)] | 🟢 / 🟡 / 🔴 [uma palavra] |
+| [e.g. LDL] | [value unit (YYYY-MM-DD)] | 🟢 / 🟡 / 🔴 [one word] |
 | | | |
 
-**Prioridades:** 🔴 [eixo] · 🔴 [eixo] · 🟡 [eixo]
+**Priorities:** 🔴 [axis] · 🔴 [axis] · 🟡 [axis]
 
-**Medicação atual (como prescrita):** [remédio, dose, horário, desde quando, médico]
+**Current medication (as prescribed):** [medicine, dose, time of day, since when, doctor]
 
-## Mapa dos documentos
+## Document map
 
-| Documento | O que tem |
+| Document | What it holds |
 |---|---|
-| [Clínico](Clinico.md) | Exames extraídos, linha do tempo, tendências, problemas ativos |
-| [Genética](Genetica.md) | Achados acionáveis do DNA e o que o dado não vê |
-| [Correlator](Correlator.md) | Exame × genética × família × casa, por eixo |
-| [Plano](Plano.md) | Próximos passos, perguntas por especialidade, cadência |
-| [Resumo](Resumo_Consulta.md) | Uma página pra consulta |
-| `Exames/` | Originais, uma pasta por evento: `AAAA-MM-DD_tipo_detalhe` |
+| [Clinical](Clinical.md) | Extracted results, timeline, trends, active problems |
+| [Genetics](Genetics.md) | Actionable DNA findings and what the data cannot see |
+| [Correlator](Correlator.md) | Labs × genetics × family × home, by axis |
+| [Plan](Plan.md) | Next steps, questions by specialty, how often to repeat tests |
+| [Visit summary](Visit_Summary.md) | One page for the appointment |
+| `Exams/` | Originals, one folder per event: `YYYY-MM-DD_type_detail` |

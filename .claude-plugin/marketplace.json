@@ -1,23 +1,23 @@
 {
-  "name": "dossie-vivo",
+  "name": "living-dossier",
   "owner": {
     "name": "Borderless",
     "url": "https://github.com/inhabitants"
   },
   "metadata": {
-    "description": "Dossiê de saúde pessoal com Claude Code: organização, síntese e estruturação de informação. O médico tem a palavra final.",
-    "version": "0.1.0"
+    "description": "A personal health dossier with Claude Code: organization, synthesis and structuring of information. Your doctor has the final word.",
+    "version": "0.2.0"
   },
   "plugins": [
     {
-      "name": "dossie-vivo",
+      "name": "living-dossier",
       "source": "./",
-      "description": "Três skills: montar o dossiê, atualizar com exame novo e analisar genoma (chip ou sequenciamento completo) na sua máquina.",
-      "version": "0.1.0",
+      "description": "Three skills: build the dossier, update it when new results arrive, and analyze a genome (consumer chip or whole genome) on your own machine.",
+      "version": "0.2.0",
       "author": {
         "name": "Borderless"
       },
-      "keywords": ["saude", "exames", "genoma", "dna", "autoconhecimento"]
+      "keywords": ["health", "lab-results", "genome", "dna", "self-knowledge"]
     }
   ]
 }

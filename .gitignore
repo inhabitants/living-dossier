@@ -1,8 +1,8 @@
-# Dossiê Vivo: este repositório guarda o MÉTODO, nunca dados de saúde.
-# A proteção principal é a sua pasta de dossiê ficar FORA de qualquer repositório git.
-# As regras abaixo são a segunda camada, pra ninguém subir exame ou DNA por acidente num fork.
+# Living Dossier: this repository holds the METHOD, never health data.
+# The main protection is keeping your dossier folder OUTSIDE any git repository.
+# The rules below are the second layer, so nobody pushes lab results or DNA to a fork by accident.
 
-# Exames, laudos e fotos
+# Lab results, reports and photos
 *.pdf
 *.jpg
 *.jpeg
@@ -14,14 +14,14 @@
 *.tiff
 *.dcm
 
-# Planilhas e exportações (chips de DNA costumam vir em .txt/.csv)
+# Spreadsheets and exports (DNA chips usually come as .txt/.csv)
 *.csv
 *.tsv
 *.txt
 *.xlsx
 *.xls
 
-# Arquivos genéticos
+# Genetic files
 *.vcf
 *.vcf.gz
 *.tbi
@@ -37,16 +37,27 @@
 *.bcf
 *.somalier
 
-# Pastas típicas de dossiê pessoal
+# Typical personal dossier folders
+Exams/
+exams/
 Exames/
 exames/
+new/
 novos/
 DNA/
 dna/
+my-dossier/
 meu-dossie/
+Health/
+health/
 Saude/
 saude/
 
-# Sistema
+# System
 .DS_Store
 Thumbs.db
+
+# The project's own files that the rules above would catch
+!llms.txt
+!site/
+!site/**

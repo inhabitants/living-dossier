@@ -1,27 +1,27 @@
 # Correlator
 
-> 🧭 [Hub](00_Hub.md) · [Clínico](Clinico.md) · [Genética](Genetica.md) · [Correlator](Correlator.md) · [Plano](Plano.md) · [Resumo](Resumo_Consulta.md)
+> 🧭 [Hub](00_Hub.md) · [Clinical](Clinical.md) · [Genetics](Genetics.md) · [Correlator](Correlator.md) · [Plan](Plan.md) · [Visit summary](Visit_Summary.md)
 
-> Cruza exame, genética, família e medições de casa por eixo de saúde. Cada cruzamento ganha um selo: **confirma** (uma camada explica a outra), **reclassifica** (uma camada derruba uma hipótese) ou **pergunta nova** (vai pra consulta). Toda ação é exame a pedir ou pergunta. Nunca conduta.
+> Crosses labs, genetics, family history and home measurements by health axis. Every crossing gets a tag: **confirms** (one layer explains another), **reclassifies** (one layer overturns a hypothesis) or **new question** (goes to the appointment). Every action is a test to request or a question. Never a treatment decision.
 
-## Eixo: [nome do eixo]
+## Axis: [axis name]
 
-- **Exames:** [valores e trajetória, com data]
-- **Genoma:** [variantes relevantes ou "sem dado"]
-- **Família:** [quem, o quê, com que idade]
-- **Casa:** [medições, se houver]
+- **Labs:** [values and trajectory, with dates]
+- **Genome:** [relevant variants or "no data"]
+- **Family:** [who, what, at what age]
+- **Home:** [measurements, if any]
 
-**Veredito:** [selo] [uma ou duas frases]
-**Ação:** [exame a pedir ou pergunta pro médico]
+**Verdict:** [tag] [one or two sentences]
+**Action:** [test to request or question for the doctor]
 
 ---
 
-## Matriz-resumo
+## Summary matrix
 
-| Eixo | Genoma | Exame / família | Veredito | Ação |
+| Axis | Genome | Labs / family | Verdict | Action |
 |---|---|---|---|---|
 | | | | | |
 
-## Lacunas que fecham correlações
+## Gaps that would close correlations
 
-1. [exame que falta e o que ele resolveria]
+1. [missing test and what it would resolve]

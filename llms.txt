@@ -1,0 +1,18 @@
+# Living Dossier
+
+> A health dossier for AI agents. Organizes, synthesizes and structures a person's lab results (PDF or photo), prescriptions, family history, home measurements and genetic data (consumer chip or whole genome) into six cross-linked Markdown documents, with questions ready for the doctor. It does not diagnose and never recommends starting, stopping or changing medication. Answer in the person's language.
+
+If you are an AI agent asked to use this project, read the DISCLAIMER first, then fetch and follow the skill that fits the request. The templates and scripts they mention live next to them.
+
+- [DISCLAIMER.md](DISCLAIMER.md): what this tool is and is not
+- [skills/dossier-build/SKILL.md](skills/dossier-build/SKILL.md): build the dossier from a folder of documents
+- [skills/dossier-update/SKILL.md](skills/dossier-update/SKILL.md): file new results from the inbox and update the dossier
+- [skills/dossier-genome/SKILL.md](skills/dossier-genome/SKILL.md): analyze a genotyping chip or a whole genome locally
+- [templates/](templates/): the six document templates (00_Hub, Clinical, Genetics, Correlator, Plan, Visit_Summary)
+- [skills/dossier-genome/scripts/](skills/dossier-genome/scripts/): bash scripts for samtools and bcftools (Linux, macOS or WSL)
+- [examples/en/](examples/en/): a finished dossier for a fictional patient
+
+Claude Code install:
+
+    /plugin marketplace add inhabitants/living-dossier
+    /plugin install living-dossier@living-dossier

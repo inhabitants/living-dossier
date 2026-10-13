@@ -1,13 +1,13 @@
 {
-  "name": "dossie-vivo",
-  "version": "0.1.0",
-  "description": "Organiza, sintetiza e estrutura a sua informação de saúde (exames, genoma, família e medições de casa) num dossiê pessoal em Markdown, com perguntas prontas pro médico. Não diagnostica nem indica remédio.",
+  "name": "living-dossier",
+  "version": "0.2.0",
+  "description": "Organizes, synthesizes and structures your health information (lab results, genome, family history and home measurements) into a personal Markdown dossier, with questions ready for your doctor. It does not diagnose or recommend medication. Answers in your language.",
   "author": {
     "name": "Borderless",
     "url": "https://github.com/inhabitants"
   },
-  "homepage": "https://github.com/inhabitants/dossie-vivo",
-  "repository": "https://github.com/inhabitants/dossie-vivo",
+  "homepage": "https://www.sapiensinteticos.com/living-dossier",
+  "repository": "https://github.com/inhabitants/living-dossier",
   "license": "MIT",
-  "keywords": ["saude", "exames", "genoma", "dna", "autoconhecimento", "organizacao", "obsidian"]
+  "keywords": ["health", "lab-results", "genome", "dna", "self-knowledge", "organization", "obsidian", "saude"]
 }
