@@ -1,0 +1,52 @@
+# Dossiê Vivo: este repositório guarda o MÉTODO, nunca dados de saúde.
+# A proteção principal é a sua pasta de dossiê ficar FORA de qualquer repositório git.
+# As regras abaixo são a segunda camada, pra ninguém subir exame ou DNA por acidente num fork.
+
+# Exames, laudos e fotos
+*.pdf
+*.jpg
+*.jpeg
+*.png
+*.heic
+*.heif
+*.webp
+*.tif
+*.tiff
+*.dcm
+
+# Planilhas e exportações (chips de DNA costumam vir em .txt/.csv)
+*.csv
+*.tsv
+*.txt
+*.xlsx
+*.xls
+
+# Arquivos genéticos
+*.vcf
+*.vcf.gz
+*.tbi
+*.csi
+*.cram
+*.crai
+*.bam
+*.bai
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.bcf
+*.somalier
+
+# Pastas típicas de dossiê pessoal
+Exames/
+exames/
+novos/
+DNA/
+dna/
+meu-dossie/
+Saude/
+saude/
+
+# Sistema
+.DS_Store
+Thumbs.db

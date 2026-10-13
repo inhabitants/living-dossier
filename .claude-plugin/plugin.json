@@ -1,0 +1,13 @@
+{
+  "name": "dossie-vivo",
+  "version": "0.1.0",
+  "description": "Organiza, sintetiza e estrutura a sua informação de saúde (exames, genoma, família e medições de casa) num dossiê pessoal em Markdown, com perguntas prontas pro médico. Não diagnostica nem indica remédio.",
+  "author": {
+    "name": "Borderless",
+    "url": "https://github.com/inhabitants"
+  },
+  "homepage": "https://github.com/inhabitants/dossie-vivo",
+  "repository": "https://github.com/inhabitants/dossie-vivo",
+  "license": "MIT",
+  "keywords": ["saude", "exames", "genoma", "dna", "autoconhecimento", "organizacao", "obsidian"]
+}
