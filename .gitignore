@@ -57,6 +57,9 @@ saude/
 .DS_Store
 Thumbs.db
 
+# The one-skill package that pack/pack.mjs builds
+living-dossier.zip
+
 # The project's own files that the rules above would catch
 !llms.txt
 !site/
