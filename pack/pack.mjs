@@ -8,10 +8,12 @@
 // Skill marketplaces and the Claude app take one folder with one SKILL.md at its
 // root. The plugin has three skills that find each other by name and read
 // ${CLAUDE_PLUGIN_ROOT}, which only exists inside a Claude Code plugin. So the
-// package is pack/SKILL.md (which picks build or update) plus the build and
-// update skills as references, rewritten to point inside the package.
-// dossier-genome stays out: it downloads micromamba and installs samtools and
-// bcftools, and marketplace scans refuse scripts that install packages.
+// package is pack/SKILL.md (which picks build, update or genome) plus the three
+// skills as references, rewritten to point inside the package.
+// The genome ships without setup-env.sh: it downloads micromamba and installs
+// samtools and bcftools, and marketplace scans refuse scripts that install
+// packages. In the package, the agent installs them with the person's own
+// package manager instead, after an ok.
 
 import { readFileSync, writeFileSync, readdirSync, statSync } from 'node:fs';
 import { deflateRawSync } from 'node:zlib';
@@ -35,7 +37,7 @@ const rewrite = (rel, swaps) => {
     if (hits !== 1) throw new Error(`${rel}: expected 1 match, found ${hits}: ${from}`);
     text = text.replace(from, to);
   }
-  if (/CLAUDE_PLUGIN_ROOT|`dossier-(update|build)` skill/.test(text)) throw new Error(`${rel}: plugin reference left behind`);
+  if (/CLAUDE_PLUGIN_ROOT|`dossier-(update|build|genome)` skill|setup-env/.test(text)) throw new Error(`${rel}: plugin reference left behind`);
   return Buffer.from(text, 'utf8');
 };
 
@@ -49,11 +51,18 @@ const entries = [
     ['Use the templates in `${CLAUDE_PLUGIN_ROOT}/templates/`.',
       'Use the templates in `templates/`, next to this package\'s `SKILL.md`.'],
     ['3. `Genetics.md`: only if there is DNA. Call the `dossier-genome` skill.',
-      '3. `Genetics.md`: only if there is DNA and the `dossier-genome` skill from the full plugin is installed (see `SKILL.md`). Without it, leave Genetics out and say so in the Hub.'],
+      '3. `Genetics.md`: only if there is DNA. Follow `references/genome.md`.'],
     ['Remind them that new results come in through `new/` with the `dossier-update` skill.',
       'Remind them that new results come in through `new/`, and that updating follows `references/update.md`.'],
   ])],
   ['references/update.md', rewrite('skills/dossier-update/SKILL.md', [])],
+  ['references/genome.md', rewrite('skills/dossier-genome/SKILL.md', [
+    ['2. **Environment.** Run `scripts/setup-env.sh` (in this skill\'s folder) to install samtools and bcftools in an isolated micromamba environment, no sudo. On Windows, run it inside WSL. The environment path must not contain `:`.',
+      '2. **Environment.** The scripts in `scripts/`, next to this package\'s `SKILL.md`, need samtools and bcftools. If `samtools --version` and `bcftools --version` already answer, skip this step. Otherwise, with the person\'s ok, install them with what the machine already has: `brew install samtools bcftools` (macOS), `sudo apt install samtools bcftools` (Debian, Ubuntu), or `conda create -p ~/dossier-bio -c conda-forge -c bioconda samtools bcftools htslib` for an environment of its own, no sudo. On Windows, everything runs inside WSL. The environment path must not contain `:`.'],
+  ])],
+  ...walk('skills/dossier-genome/scripts')
+    .filter((rel) => !rel.endsWith('/setup-env.sh'))
+    .map((rel) => [`scripts/${path.basename(rel)}`, read(rel)]),
   ...['LICENSE', 'DISCLAIMER.md', ...walk('templates'), ...walk('examples')].map((rel) => [rel, read(rel)]),
 ];
 
